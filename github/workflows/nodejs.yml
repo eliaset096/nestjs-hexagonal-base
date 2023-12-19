@@ -1,0 +1,23 @@
+name: Node CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 20.10.0
+        uses: actions/setup-node@v1
+        with:
+          node-version: 20.10.0
+      - name: yarn install
+        run: |
+          yarn install
+      - name: yarn run build
+        run: |
+          yarn run build --if-present
+          yarn run lint
+      - name: yarn test
+        run: |
+          yarn test

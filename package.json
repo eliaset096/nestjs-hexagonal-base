@@ -18,7 +18,9 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "postbuild": "npm run generate:swagger",
+    "generate:swagger": "nest build && nest swagger"
   },
   "dependencies": {
     "@nestjs/config": "^3.1.1",
@@ -56,6 +58,7 @@
     "ts-loader": "^9.2.3",
     "ts-node": "^10.0.0",
     "tsconfig-paths": "4.1.1",
+    "@nestjs/swagger": "^4.8.0",
     "husky": "^8.0.3",
     "typescript": "^4.7.4",
     "lint-staged": "^13.1.0"
