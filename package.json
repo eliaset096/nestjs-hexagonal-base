@@ -1,10 +1,14 @@
 {
-  "name": "nestjs-hexagonal-skeleton",
+  "name": "nestjs-hexagonal-base",
   "version": "0.0.1",
-  "description": "NestJS Hexagonal Architecture Skeleton",
+  "description": "NestJS Hexagonal Architecture Base",
   "author": "eliaset96 <https://github.com/eliaset96>",
   "private": true,
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eliaset096/nestjs-hexagonal-base.git"
+  },
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
